@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create Button component 1`] = `
+"
+
+SUCCESS>>> Component Button created in ./test/components
+
+
+"
+`;
+
+exports[`should fail create Link component 1`] = `
+"
+
+FAIL>>>>>> Component Link already exists in ./test/components
+
+
+"
+`;
+
+exports[`shows an error on define destination path 1`] = `
+"Options:
+  --help           Show help                                           [boolean]
+  --version        Show version number                                 [boolean]
+  --structure, -s  Define component structure e.g.
+                   .js .stories.js __tests__/.test.js ->
+                   component-name/component-name.js,
+                   component-name/component-name.stories.js,
+                   component-name/__tests__/component-name.test.js
+                                                              [array] [required]
+  --path, -p       Set component destination path            [string] [required]
+
+Missing required argument: path
+Provide component destination relative path
+"
+`;
+
+exports[`shows an error on define destination path 2`] = `
+"Options:
+  --help           Show help                                           [boolean]
+  --version        Show version number                                 [boolean]
+  --structure, -s  Define component structure e.g.
+                   .js .stories.js __tests__/.test.js ->
+                   component-name/component-name.js,
+                   component-name/component-name.stories.js,
+                   component-name/__tests__/component-name.test.js
+                                                              [array] [required]
+  --path, -p       Set component destination path            [string] [required]
+
+Not enough arguments following: path
+"
+`;
+
+exports[`shows an error on define structure 1`] = `
+"Options:
+  --help           Show help                                           [boolean]
+  --version        Show version number                                 [boolean]
+  --structure, -s  Define component structure e.g.
+                   .js .stories.js __tests__/.test.js ->
+                   component-name/component-name.js,
+                   component-name/component-name.stories.js,
+                   component-name/__tests__/component-name.test.js
+                                                              [array] [required]
+  --path, -p       Set component destination path            [string] [required]
+
+Missing required argument: structure
+Provide component structure
+"
+`;
+
+exports[`shows an error on define structure 2`] = `
+"Options:
+  --help           Show help                                           [boolean]
+  --version        Show version number                                 [boolean]
+  --structure, -s  Define component structure e.g.
+                   .js .stories.js __tests__/.test.js ->
+                   component-name/component-name.js,
+                   component-name/component-name.stories.js,
+                   component-name/__tests__/component-name.test.js
+                                                              [array] [required]
+  --path, -p       Set component destination path            [string] [required]
+"
+`;

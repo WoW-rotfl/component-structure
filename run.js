@@ -1,4 +1,3 @@
-const path = require('path');
 const yargs = require('yargs');
 const chalk = require('chalk');
 const { createInterface } = require('readline');
@@ -11,9 +10,9 @@ function printResult(result, componentsPath) {
   console.log('\n');
   result.forEach(([name, isCreated]) => {
     if (isCreated) {
-      console.log(chalk.green(`SUCCESS>>> Component ${name} created in ${path.resolve(componentsPath)}`));
+      console.log(chalk.green(`SUCCESS>>> Component ${name} created in ${componentsPath}`));
     } else {
-      console.log(chalk.magenta(`FAIL>>>>>> Component ${name} already exists in ${path.resolve(componentsPath)}`));
+      console.log(chalk.magenta(`FAIL>>>>>> Component ${name} already exists in ${componentsPath}`));
     }
   });
   console.log('\n');
