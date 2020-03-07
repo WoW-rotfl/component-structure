@@ -8,9 +8,9 @@ const rimraf = require('rimraf');
 const componentsPath = path.resolve('./test/components');
 
 beforeAll(() => {
-  const LinkPath = path.join(componentsPath, 'Link');
-  mkdirp.sync(LinkPath);
-  fs.writeFile(path.join(LinkPath, 'index.js'));
+  const AvatarPath = path.join(componentsPath, 'Avatar');
+  mkdirp.sync(AvatarPath);
+  fs.writeFileSync(path.join(AvatarPath, 'index.js'));
 });
 
 afterAll(() => {
@@ -45,8 +45,8 @@ it('should create Button component', async () => {
 
 });
 
-it('should fail create Link component', async () => {
-  const { stdout } = await exec('./index.js Link -p ./test/components -s index.js');
+it('should fail create Avatar component', async () => {
+  const { stdout } = await exec('./index.js Avatar -p ./test/components -s index.js');
 
   expect(stdout).toMatchSnapshot();
 });

@@ -18,8 +18,7 @@ function printResult(result, componentsPath) {
   console.log('\n');
 }
 
-
-module.exports = async () => {
+module.exports = () => {
   const argv = yargs
     .option('structure', {
       'alias': 's',
@@ -52,38 +51,36 @@ module.exports = async () => {
     return line.trim().split(/\s+/);
   }
 
-  const componentNms = argv._;
+  const componentsNms = argv._;
   if (!argv.structure.length) {
     yargs.showHelp();
     console.log('Not enough arguments following: structure');
     process.exit(1);
   }
-
-  if (!componentNms.length) {
+  if (!componentsNms.length) {
     rl.setPrompt('Component name(s) separated by spaces: ');
     rl.prompt();
-
+    
     rl.on('line', line => {
-      createComponents(lineToArray(line), getPath(), getStructure())
-        .then(result => {
-          rl.close();
-          printResult(result, getPath());
-          process.exit(0);
-        })
-        .catch(error => {
-          console.log(error);
-          rl.close();
-          process.exit(1);
-        });
-    })
+      try {
+        const result = createComponents(lineToArray(line), getPath(), getStructure());
+        rl.close();
+        printResult(result, getPath());
+        process.exit(0);
+      } catch(error) {
+        console.log(error);
+        rl.close();
+        process.exit(1);
+      }
+    });
     return;
   }
-
-  const result = await createComponents(componentNms, getPath(), getStructure()).catch(error => {
+  try {
+    const result = createComponents(componentsNms, getPath(), getStructure())
+    printResult(result, getPath());
+    process.exit(0);
+  } catch(error) {
     console.log(error);
     process.exit(1);
-  });
-
-  printResult(result, getPath());
-  process.exit(0);
+  }
 };
