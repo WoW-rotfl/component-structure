@@ -9,10 +9,10 @@ SUCCESS>>> Component Button created in ./test/components
 "
 `;
 
-exports[`should fail create Link component 1`] = `
+exports[`should fail create Avatar component 1`] = `
 "
 
-FAIL>>>>>> Component Link already exists in ./test/components
+FAIL>>>>>> Component Avatar already exists in ./test/components
 
 
 "
