@@ -1,6 +1,6 @@
-# Create Component
+# Component Structure
 
-Create Component is a component structure creation CLI tool. It created directory with all defined structure(files).
+Component Structure is a component structure creation CLI tool. It created directory with all defined structure(files).
 
 ## How it works
 
@@ -12,13 +12,13 @@ Create Component is a component structure creation CLI tool. It created director
 1. Install the package
 
 ```sh
-npm install create-component --save-dev
+npm install component-structure --save-dev
 ```
 
 2. Two ways, direct shell:
 
 ```sh
-./node_modules/.bin/create-component Button --path ./src/components --structure index.js .js __tests__/.test.js __tests__/.e2e.js
+./node_modules/.bin/component-structure Button --path ./src/components --structure index.js .js __tests__/.test.js __tests__/.e2e.js
 ```
 
 or set in package.json
@@ -28,8 +28,8 @@ or set in package.json
   "scripts": {
     "start": ...,
     "test":  ...,
-    "cc": "./node_modules/.bin/create-component -p ./src/components -s index.js .js __tests__/.test.js __tests__/.e2e.js --"
-    "cc:ui": "./node_modules/.bin/create-component -p ./src/components/ui -s index.js .js __tests__/.test.js __tests__/.e2e.js --"
+    "cs": "./node_modules/.bin/component-structure -p ./src/components -s index.js .js __tests__/.test.js __tests__/.e2e.js --"
+    "cs:ui": "./node_modules/.bin/component-structure -p ./src/components/ui -s index.js .js __tests__/.test.js __tests__/.e2e.js --"
   }
 }
 ```

@@ -1,12 +1,11 @@
 {
-  "name": "create-component",
+  "name": "component-structure",
   "version": "1.0.0",
   "description": "CLI tool for create components",
   "keywords": ["component", "react", "angular", "vue"],
   "repository": "git@github.com:WoW-rotfl/create-component.git",
   "author": "Vlad Armizonov <wow-rotfl@yandex.ru>",
   "license": "MIT",
-  "private": true,
   "bin": "index.js",
   "engines": {
     "node": ">=10.0.0"
