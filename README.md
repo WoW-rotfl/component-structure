@@ -1,6 +1,6 @@
 # Component Structure
 
-Component Structure is a component structure creation CLI tool. It created directory with all defined structure(files).
+Component Structure is a component creation CLI tool. It created directory with all defined structure(files).
 
 ## How it works
 
