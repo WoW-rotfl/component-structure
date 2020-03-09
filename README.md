@@ -4,8 +4,8 @@ Component Structure is a component creation CLI tool. It created directory with 
 
 ## How it works
 
-1. Define component destination relative path e.g. ./src/components 
-2. Define component structure separated by space e.g. index.js .js .scss __tests__/.test.js. Files with component name must start with dot e.g. .js -> ComponentName.js, .test.js -> ComponentName.test.js
+1. Define component destination relative path e.g. `./src/components`
+2. Define component structure separated by space e.g. `index.js .js .scss __tests__/.test.js. Files with component name must start with dot e.g.  .js -> ComponentName.js, .test.js -> ComponentName.test.js`
 
 ## Usage
 
@@ -33,8 +33,11 @@ or set in package.json
   }
 }
 ```
+**Note** 
+Two dashes at the end of the line required(due to yargs api) - for the separating component names from structure. 
+
 and run:
 ```sh
-npm run cc Accordion Button Link Panel
+npm run cs Accordion Button Link Panel
 ```
 
